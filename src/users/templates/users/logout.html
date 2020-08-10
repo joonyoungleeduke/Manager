@@ -1,0 +1,16 @@
+{% extends 'users/base.html' %}
+{% load crispy_forms_tags %}
+{% block content %}
+
+<div id="bg-home" class="center">
+    <div class="card text-light">
+        <div class="card-body">
+            <h2 class="card-title">Logged Out</h2>
+            <a style="text-decoration: none;" href="{% url 'users-login' %}">
+                <button class="btn btn-outline-light btn-lg">Log In Again</button>
+            </a>
+        </div>
+    </div>
+</div>
+
+{% endblock content %}

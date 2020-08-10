@@ -1,0 +1,22 @@
+{% extends 'main/appsbase.html' %}
+{% load static %}
+{% load crispy_forms_tags %}
+{% block content2 %}
+    <!--ACTION BUTTONS -->
+    <div id="bg-home" class="center-horizontal">
+        <div class="card text-light mt-5">
+            <div class="card-body center">
+                <svg id="user-image" class="user-image-cont" viewBox="0 0 16 16" class="bi bi-person-fill" fill="white" xmlns="http://www.w3.org/2000/svg">
+                    <path fill-rule="evenodd" d="M3 14s-1 0-1-1 1-4 6-4 6 3 6 4-1 1-1 1H3zm5-6a3 3 0 1 0 0-6 3 3 0 0 0 0 6z"/>
+                </svg>
+                <br>
+                <h2 class="card-title">{{ owner }}</h2>
+                <br>
+                <div class="prof-btns">
+                    <a href="{% url 'notes-home' %}"><button class="btn btn-outline-light m-2">Notes</button></a>
+                    <a href="{% url 'reminders-main' %}"><button class="btn btn-outline-light m-2 ">Reminders</button></a>
+                    <a href="{% url 'users-logout' %}"><button class="btn btn-outline-light m-2 ">Log Out</button></a>
+                </div>
+            </div>
+        </div>
+{% endblock content2 %}

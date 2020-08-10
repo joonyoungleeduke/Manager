@@ -1,0 +1,23 @@
+{% extends 'users/base.html' %}
+{% load crispy_forms_tags %}
+{% block content %}
+
+    <div id="bg-home" class="center">
+        <div class="card text-light">
+            <form method="POST">
+                {% csrf_token %}
+                <div class="card-body">
+                    <h2 class="card-title">Registration</h2>
+                        {{ form|crispy }}
+                    <button type="submit" class="btn btn-outline-light btn-lg">Submit</button>
+                    <small class="text-light">
+                        Already Have An Account? 
+                        <a class="ml-2" href="{% url 'users-login' %}">Log In</a>
+                    </small>
+                </div>
+            </form>
+        </div>
+    </div>
+
+{% endblock content %}
+
