@@ -8,7 +8,7 @@
         <!-- <h1 class="landing-text" style="color: #1D2426;">Welcome</h1> -->
         <br>
         {% if user.is_authenticated %}
-            <a href="{% url 'home' %}"><button type="button" class="landing-btn btn btn-lg">ENTER</button></a>
+            <a href="{% url 'profile' %}"><button type="button" class="landing-btn btn btn-lg">ENTER</button></a>
         {% else %}
             <a href="{% url 'users-login' %}"><button type="button" class="landing-btn btn btn-lg">ENTER</button></a>
         {% endif %}

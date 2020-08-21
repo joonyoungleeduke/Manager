@@ -43,21 +43,8 @@ body {
   background-image: #fff;
   height: 90%;
   width: 100%; 
-}
-
-#bg-home-pic {
-  background-image: url('https://i.imgur.com/r5du8zR.jpg'); 
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover; 
-  height: 90%;
-  width: 100%; 
-}
-
-#bg-home-overlay {
-  height: 100%; 
-  width: 100%; 
-  background-color: rgba(0,0,0,0.8);
+  display: flex; 
+  align-items: center; 
 }
 
 #home-time {
@@ -155,12 +142,13 @@ a.article-title:hover {
     height: 10%;
 }
 
+.modal-header {
+  display: block !important; 
+}
+
 .notes-container {
   display: flex; 
   flex-direction: column; 
-  position: absolute; 
-  left: 10%; 
-  top: 15%; 
 }
 
 .contain-notes-header {
@@ -184,17 +172,12 @@ a.article-title:hover {
 }
 
 .content-section {
-  background-color: #1D2426;
-  border: 1px solid #1D2426;
-  border-radius: 15px;
-  top: 13%;
-  right: 10%;
-  position: absolute !important;
-  height: 83%; 
-  width: 50%;
+  padding: 20px; 
   display: flex;
+  flex-direction: column; 
   justify-content: center; 
   align-items: center; 
+  color: black !important; 
 }
 
 .content-subdivision {
@@ -203,12 +186,7 @@ a.article-title:hover {
 }
 
 #note-buttons {
-  justify-self: flex-start !important; 
-  align-self: flex-start !important; 
-  padding: 0; 
-  position: absolute;
-  left: 20%;
-  top: 12%; 
+  margin: 20px; 
 }
 
 .navbar {
@@ -260,8 +238,9 @@ a.article-title:hover {
   background-size: cover; 
 }
 
-#user-image {
-  object-fit: cover; 
+.navbar-brand > svg {
+  width: 30%; 
+  height: 30%; 
 }
 
 .dropdown-menu {
@@ -271,13 +250,6 @@ a.article-title:hover {
 .dropdown-menu > li > a {
   color: #fff !important; 
   text-decoration: none !important; 
-}
-
-.dropdown-menu-center {
-  left: 72% !important; 
-  right: auto !important; 
-  text-align: center !important; 
-  transform: translate(-50%, 0) !important; 
 }
 
 .btn:focus, .btn:active {

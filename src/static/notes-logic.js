@@ -8,29 +8,6 @@ if ('{{ id }}') {
   let active_note = false; 
 }
 
-// Creating a new note 
-let create_active = false;
-$('.create-note-btn').on('click', function() {
-  // This logic is for EDITING a note, which needs selection of a note and clicking the 'create' button
-  if (!create_active && active_note) {
-    create_active = true; 
-    let obj_id = $('.clicked').attr('id'); 
-    document.getElementsByClassName(obj_id)[0].click(); 
-  }
-
-  if (create_active && !active_note) {
-    create_active = false; 
-    document.getElementById('create-note-content').classList.add('display-nothing');
-
-  } else if (!active_note) {
-    create_active = true; 
-    $('.contain-notes-content').addClass('display-nothing');
-    $('.clicked-back').removeClass('clicked-back');
-    console.log(document.getElementById('create-note-content'))
-    document.getElementById("create-note-content").classList.remove('display-nothing');
-  } 
-})
-
 // Selecting an existing note 
 $(".contain-notes-header").on("click", function() {
 

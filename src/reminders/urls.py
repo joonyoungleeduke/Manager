@@ -10,6 +10,3 @@ urlpatterns = [
     path('reminder-add/', reminders_views.add_reminder, name="reminders-add"),
     path('reminder-delete/', reminders_views.delete_reminder, name='reminder-delete'),
 ]
-
-if settings.DEBUG is True:
-    urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)

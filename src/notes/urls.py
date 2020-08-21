@@ -8,9 +8,6 @@ from django.conf import settings
 urlpatterns = [
     path('notes/', notes_views.notes, name="notes-home"),
     path('note-create/', notes_views.new_note, name="notes-create"),
-    path('note-delete/<int:id>/', notes_views.delete_note, name='notes-delete'),
+    path('notes-delete/<int:id>/', notes_views.delete_note, name='notes-delete'),
     path('home/<int:id>', notes_views.notes, name='notes-edit'),
 ]
-
-if settings.DEBUG is True:
-    urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)

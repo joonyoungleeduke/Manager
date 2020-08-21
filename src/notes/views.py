@@ -9,7 +9,6 @@ from django.views.generic.base import View
 def delete_note(request, id):
     note = get_object_or_404(Note, id=id)
     note.delete()
-    # Need proper validation
     return redirect('notes-home')
 
 @login_required

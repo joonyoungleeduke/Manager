@@ -84,8 +84,12 @@ WSGI_APPLICATION = 'school_manager.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
+        'ENGINE': 'django.db.backends.postgresql_psycopg2',
+        'NAME': 'school_manager',
+        'USER': 'joonyounglee',
+        'PASSWORD': 'test',
+        'HOST': 'localhost',
+        'PORT': '',
     }
 }
 
@@ -126,10 +130,12 @@ USE_TZ = True
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/3.0/howto/static-files/
 
-LOGIN_REDIRECT_URL = "home"
+LOGIN_REDIRECT_URL = "profile"
 
 STATIC_URL = '/static/'
-# STATIC_ROOT = os.path.join(BASE_DIR, 'static')
+# STATIC_ROOT = 'http://localhost:8000'
+
+# os.path.join(BASE_DIR, 'static')
 
 STATICFILES_DIRS = [
     os.path.join(BASE_DIR, 'static'),

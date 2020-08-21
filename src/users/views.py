@@ -2,7 +2,6 @@ from django.shortcuts import render, redirect, get_object_or_404
 from .forms import RegisterForm
 from django.contrib.auth import authenticate, login
 from django.contrib.auth.decorators import login_required 
-from .models import Profile 
 from django.views.generic.edit import UpdateView
 
 def register(request):
@@ -17,6 +16,6 @@ def register(request):
     return render(request, 'users/register.html', {'form': form})
 
 @login_required 
-def profile(request, owner):
+def profile(request):
 
     return render(request, 'users/profile.html', {'owner': request.user.username,})
